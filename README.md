@@ -7,7 +7,8 @@ In this lab, I simulated the download and execution of a malicious script on a W
 - Microsoft Defender (KQL)
 
 ## Step 1: Setting up the Alert in Microsoft Defender
-I created the following the detection rule in Defender using the following query:
+I created a detection rule in Defender that would detect the existence of a file on the system named "AutoIt3.exe" which in this case is the script executor. The rule also checks if any commands run on the system that contain the values ".au3" or "calc.au3," then the alert is triggered.
+I created the detection rule using the following query:
 ```kql
 DeviceProcessEvents
 | where DeviceName == "rojas-mde"
@@ -15,6 +16,14 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any (".au3", "calc.au3")
 | where FolderPath has_any ("Users", "Temp", "Downloads")
 ```
-
+## Step 2: Setting up the Alert in Microsoft Defender
+I created a detection rule in Defender that would detect the existence of a file on the system named "AutoIt3.exe" which in this case is the script executor. The rule also checks if any commands run on the system that contain the values ".au3" or "calc.au3," then the alert is triggered.
+I created the detection rule using the following query:
+```kql
+DeviceProcessEvents
+| where DeviceName == "rojas-mde"
+| where InitiatingProcessFileName =~ "AutoIt3.exe"
+| where FileName =~ "calc.exe"
+```
 
 
