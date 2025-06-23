@@ -85,3 +85,5 @@ Invoke-AtomicTest T1059 -PathToAtomicsFolder "C:\Users\YourUser\atomic-red-team\
 ## Step 3: Analyze the Indicators of Compromise
 Using Microsoft Defender, I was able to view the steps the malicious attacker took to facilitate the attack. Within this page, is it also useful to make note of the timestamps.
 ![image](https://github.com/user-attachments/assets/05ecd3d7-301a-467b-a9dc-5a1e7745c945)
+
+According to the NIST 800-61 guidelines, there are certain tasks necessary to perform in order to determine if the alert is a true or false positive.
