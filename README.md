@@ -2,7 +2,6 @@
 In this lab, I simulated the download and execution of a malicious script on a Windows 10 system and referencing the NIST 800-61 guideline, to the extent of the lab, I was able to set up alerts to detect, investigate it, and isolate the machine. The malicious file was download from Atomic Red Team; an organization that publishes malicious files that allow for you to simulate cyber attacks. In this case, the script ends by opening the calculator app.
 
 ## Tools Utilized
-- Wireshark
 - Powershell
 - Microsoft Defender (KQL)
 
@@ -87,10 +86,13 @@ Using Microsoft Defender, I was able to view the steps the malicious attacker to
 ![image](https://github.com/user-attachments/assets/05ecd3d7-301a-467b-a9dc-5a1e7745c945)
 
 According to the NIST 800-61 guidelines, there are certain tasks necessary to perform in order to determine if the alert is a true or false positive:
-1. **Find the attack vector used to initiate the attack.** The attack vector is the means by which the attack was intiated; things like a malicious link or a USB drive etc. But because this a simulated lab, there is no attack vector per se.
-2. **Finding precursors or indicators of a security incident.**
-3. **Analyze the potential security Incident and determine if it is a true or false positive.**
-4. **Document all findings and activities of investigation if it is a true positive.**
-5. **Report the confirmed security incident to management team**
+1. **_Find the attack vector used to initiate the attack._** The attack vector is the means by which the attack was intiated; things like a malicious link or a USB drive etc. But because this a simulated lab, there is no attack vector per se.
+2. **_Finding precursors or indicators of a security incident._** Because this is a lab and the attack was done my myself, there are no IoC leading up to the attack. 
+3. **_Analyze the potential security Incident and determine if it is a true or false positive._** After reviewing the alerts in Defender, I verified the the script was indeed downloaded and run.
+4. **_Document all findings and activities of investigation if it is a true positive._** The feature to downlaod a investigation package is currently avaliable in Microsoft Defender.
+5. **_Report the confirmed security incident to management team._** Of course, because this is a simluated lab, there is no management team, but in the real-world, this step would be performed by emailing or presenting findings during a briefing.
+
+## Step 4: NIST 800-61 Incident Response
+
 
 
