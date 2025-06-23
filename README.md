@@ -87,10 +87,10 @@ Using Microsoft Defender, I was able to view the steps the malicious attacker to
 ![image](https://github.com/user-attachments/assets/05ecd3d7-301a-467b-a9dc-5a1e7745c945)
 
 According to the NIST 800-61 guidelines, there are certain tasks necessary to perform in order to determine if the alert is a true or false positive:
-1. Find the attack vector used to initiate the attack.
-2. Finding precursors or indicators of a security incident.
-3. Analyze the potential security Incident and determine if it is a true or false positive.
-4. Document all findings and activities of investigation if it is a true positive.
-5. Report the confirmed security incident to management team
+**1. Find the attack vector used to initiate the attack.** The attack vector is the means by which the attack was intiated; things like a malicious link or a USB drive etc. But because this a simulated lab, there is no attack vector per se.
+**2. Finding precursors or indicators of a security incident.**
+**3. Analyze the potential security Incident and determine if it is a true or false positive.**
+**4. Document all findings and activities of investigation if it is a true positive.**
+**5. Report the confirmed security incident to management team**
 
 
