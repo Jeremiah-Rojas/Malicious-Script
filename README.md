@@ -8,11 +8,12 @@ In this lab, I simulated the download and execution of a malicious script on a W
 
 ## Step 1: Setting up the Alert in Microsoft Defender
 I created the following the detection rule in Defender using the following query:
-'DeviceProcessEvents
+`DeviceProcessEvents
 | where DeviceName == "rojas-mde"
 | where FileName =~ "AutoIt3.exe"
 | where ProcessCommandLine has_any (".au3", "calc.au3")
 | where FolderPath has_any ("Users", "Temp", "Downloads")
-'
+`
+
 
 
