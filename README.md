@@ -8,7 +8,7 @@ In this lab, I simulated the download and execution of a malicious script on a W
 
 ## Step 1: Setting up the Alert in Microsoft Defender
 Rule 1:
-I created a detection rule in Defender that would detect the existence of a file on the system named 'AutoIt3.exe' which in this case is the script executor. The rule also checks if any commands run on the system that contain the values '.au3' or 'calc.au3', then the alert is triggered.
+I created a detection rule in Defender that would detect the existence of a file on the system named `AutoIt3.exe` which in this case is the script executor. The rule also checks if any commands run on the system that contain the values `.au3` or `calc.au3`, then the alert is triggered.
 I created the detection rule using the following query:
 ```kql
 DeviceProcessEvents
@@ -18,7 +18,7 @@ DeviceProcessEvents
 | where FolderPath has_any ("Users", "Temp", "Downloads")
 ```
 Rule 2:
-This detection rule is triggered when 'AutoIt.exe' launches 'calc.exe'. The way I know to search with these parameters is because these processes are common given the attack scenario.
+This detection rule is triggered when `AutoIt.exe` launches `calc.exe`. The way I know to search with these parameters is because these processes are common given the attack scenario.
 I created the detection rule using the following query:
 ```kql
 DeviceProcessEvents
@@ -27,7 +27,7 @@ DeviceProcessEvents
 | where FileName =~ "calc.exe"
 ```
 Rule 3:
-This rule was designed to trigger an alert when Powershell is used to download content from the internet; this is done using the 'Invoke-WebRequest'.
+This rule was designed to trigger an alert when Powershell is used to download content from the internet; this is done using the `Invoke-WebRequest`.
 I created the detection rule using the following query:
 ```kql
 DeviceProcessEvents
@@ -37,7 +37,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has "autoit" "getfile.pl"
 ```
 Rule 4:
-The last rule triggers an alert when Powershell is being used to install 'AutoIt.exe'. Powershell is not a common method of installing programs like these in normal day-to-day activities therefore this activity is considered suspicious.
+The last rule triggers an alert when Powershell is being used to install `AutoIt.exe`. Powershell is not a common method of installing programs like these in normal day-to-day activities therefore this activity is considered suspicious.
 I created the detection rule using the following query:
 ```kql
 DeviceFileEvents
