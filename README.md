@@ -45,4 +45,7 @@ DeviceFileEvents
 | where FileName has "autoit" and FileName endswith ".exe"
 | where InitiatingProcessFileName =~ "powershell.exe"
 ```
-
+## Step 2: Running the Attack (Steps taken by the Attacker/Victim)
+```powershell
+Invoke Web Request
+```
