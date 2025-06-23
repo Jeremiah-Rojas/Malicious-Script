@@ -82,4 +82,6 @@ Invoke-AtomicTest T1059 -PathToAtomicsFolder "C:\Users\YourUser\atomic-red-team\
 ```
 ![image](https://github.com/user-attachments/assets/6db2f87a-4951-4020-bde6-366ef5f1e45f)
 
-## Step 3: Running the Attack (Steps taken by the Attacker/Victim)
+## Step 3: Analyze the Indicators of Compromise
+Using Microsoft Defender, I was able to view the steps the malicious attacker took to facilitate the attack. Within this page, is it also useful to make note of the timestamps.
+![image](https://github.com/user-attachments/assets/05ecd3d7-301a-467b-a9dc-5a1e7745c945)
