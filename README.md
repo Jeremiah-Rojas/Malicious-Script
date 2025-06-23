@@ -46,6 +46,9 @@ DeviceFileEvents
 | where InitiatingProcessFileName =~ "powershell.exe"
 ```
 ## Step 2: Running the Attack (Steps taken by the Attacker/Victim)
+This series of commands would have been taken by the victim or attacker depending on the circumstances in the real-world.
+
+Oh cry oh sob!
 ```powershell
-Invoke Web Request
+git clone https://github.com/redcanaryco/atomic-red-team.git
 ```
