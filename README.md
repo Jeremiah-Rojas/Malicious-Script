@@ -1,9 +1,5 @@
-# Malicious-Script
-
-# Jeremiah Rojas' IT and Cybersecurity Project Portfolio
-
-I am a student committed to learning how to use different tools and skills that make me a more effective cybersecurity professional. These vulnerability management and threat hunting  projects have allowed me to better understand the hands-on application of system hardening thus reducing the attack surface through platforms like Microsoft Sentinel and Nessus. Click on the links below to view my remediation efforts.
-
+# Malicious-Script Lab
+In this lab, I simulated the download and execution of a malicious script on a Windows 10 system and referecing the NIST 800-61 guideline, to the xtend of the lab, I was able to set up alerts to detect, investigate it, and isolate the machine.
 
 ## Vulnerability Management
 
