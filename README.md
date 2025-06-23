@@ -80,4 +80,6 @@ Runs and detonates the malicious script in the VM. The calculator should launch 
 ```powershell
 Invoke-AtomicTest T1059 -PathToAtomicsFolder "C:\Users\YourUser\atomic-red-team\atomics\"
 ```
+![image](https://github.com/user-attachments/assets/6db2f87a-4951-4020-bde6-366ef5f1e45f)
+
 ## Step 3: Running the Attack (Steps taken by the Attacker/Victim)
