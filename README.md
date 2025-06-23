@@ -48,7 +48,16 @@ DeviceFileEvents
 ## Step 2: Running the Attack (Steps taken by the Attacker/Victim)
 This series of commands would have been taken by the victim or attacker depending on the circumstances in the real-world.
 
-Oh cry oh sob!
+This downloads the full library of Atomic Red simulated attacks into the VM, including the script that will be run. 
 ```powershell
 git clone https://github.com/redcanaryco/atomic-red-team.git
 ```
+This command moves the user to the folder where the scripts are loaded.
+```powershell
+cd C:\Users\ceh2025\atomic-red-team
+```
+This command makes sure that the atomic script is being pulled from the correct folder (Atomics) that was created when the user cloned the Atomic Red database of attacks.
+```powershell
+$env:PathToAtomicsFolder = "C:\Users\YourUser\atomic-red-team\atomics\"
+```
+This preps your VM for running the attacks by downloading the right module to do so. “-AllowClobber” also allows you to override any existing modules that could get in the way.
