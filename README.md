@@ -60,4 +60,24 @@ This command makes sure that the atomic script is being pulled from the correct 
 ```powershell
 $env:PathToAtomicsFolder = "C:\Users\YourUser\atomic-red-team\atomics\"
 ```
-This preps your VM for running the attacks by downloading the right module to do so. “-AllowClobber” also allows you to override any existing modules that could get in the way.
+This prepares the VM for running the attacks by downloading the right module to do so. “-AllowClobber” also allows the user to override any existing modules that could get in the way.
+```powershell
+Install-Module -Name Invoke-AtomicRedTeam -Force -AllowClobber
+```
+This pulls up the needed module to run the script for the current Powershell session. The user will see it install in powershell.
+```powershell
+Import-Module Invoke-AtomicRedTeam
+```
+This prepares the VM for the attacks by creating the right permissions so that no security controls interfere.
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force
+```
+This command downloads and installs all the prerequisites needed to run the script.
+```powershell
+Invoke-AtomicTest T1059 -GetPrereqs -PathToAtomicsFolder "C:\Users\YourUser\atomic-red-team\atomics\"
+```
+Runs and detonates the malicious script in the VM. The calculator should launch after running this; in a real-world scenario, the end result would be much more concerning.
+```powershell
+Invoke-AtomicTest T1059 -PathToAtomicsFolder "C:\Users\YourUser\atomic-red-team\atomics\"
+```
+## Step 3: Running the Attack (Steps taken by the Attacker/Victim)
