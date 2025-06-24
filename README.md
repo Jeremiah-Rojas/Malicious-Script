@@ -107,4 +107,4 @@ According to the NIST 800-61 guidelines, there are certain tasks necessary to pe
 
 **Post-Incident Activity**
 
-This would include the lessons learned and the retention of the data collected. The lessons learned would be to prevent any user from altering the security confirguations of their system and to implement a secure baseline for all endpoints. The data collected from the attack should be saved according to the organization's policies.
+- This would include the lessons learned and the retention of the data collected. The lessons learned would be to prevent any user from altering the security confirguations of their system and to implement a secure baseline for all endpoints. The data collected from the attack should be saved according to the organization's policies.
