@@ -94,10 +94,14 @@ According to the NIST 800-61 guidelines, there are certain tasks necessary to pe
 
 ## Step 4: NIST 800-61 Incident Response
 **Preparation**
+-
 The proper preparation to prevent an attack like this would be to ensure the the system was fully updated, its firewall properly configured, implementing a back-up of data/system configurations, and other such activities; in this case, I turned off the firewalls so that nothing would prevent the attack from executing.
 **Detection and Analysis**
+-
 The IoCs in this case would be the downloading of the AutoIt.exe file and the fact that the user disabled multiple security configurations in order for the program to run smoothly.
 **Containment, Eradication, and Recovery**
+-
 The proper steps to be taken would be to isolate the device, remove all malicious files/programs, and restore the system back to a secure state using a back-up. Before removing all the malicious files, its important to retain all relevant data for future purpose and legal reasons. Microsoft Defender has a built-in feature that automatically collects the evidence of the attack.
 **Post-Incident Activity**
+-
 This would include the lessons learned and the retention of the data collected. The lessons learned would be to prevent any user from altering the security confirguations of their system and to implement a secure baseline for all endpoints. The data collected from the attack should be saved according to the organization's policies.
