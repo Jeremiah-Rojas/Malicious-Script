@@ -87,12 +87,20 @@ Using Microsoft Defender, I was able to view the steps the malicious attacker to
 
 According to the NIST 800-61 guidelines, there are certain tasks necessary to perform in order to determine if the alert is a true or false positive:
 1. **_Find the attack vector used to initiate the attack._** The attack vector is the means by which the attack was intiated; things like a malicious link or a USB drive etc. But because this a simulated lab, there is no attack vector per se.
-2. **_Finding precursors or indicators of a security incident._** Because this is a lab and the attack was done my myself, there are no IoC leading up to the attack. 
+2. **_Finding precursors or indicators of a security incident._** Because this is a lab and the attack was done my myself, there are no IoCs leading up to the attack. 
 3. **_Analyze the potential security Incident and determine if it is a true or false positive._** After reviewing the alerts in Defender, I verified the the script was indeed downloaded and run.
 4. **_Document all findings and activities of investigation if it is a true positive._** The feature to downlaod a investigation package is currently avaliable in Microsoft Defender.
 5. **_Report the confirmed security incident to management team._** Of course, because this is a simluated lab, there is no management team, but in the real-world, this step would be performed by emailing or presenting findings during a briefing.
 
 ## Step 4: NIST 800-61 Incident Response
-
-
-
+**Preparation**
+- The proper preparation to prevent an attack like this would be to ensure the the system was fully updated, its firewall properly configured, implementing a back-up of data/system configurations, and other such activities; in this case, I turned off the firewalls so that nothing would prevent the attack from executing.
+**Detection and Analysis**
+- The IoCs in this case would be the downloading of the AutoIt.exe file and the fact that the user disabled multiple security configurations in order for the program to run smoothly.
+**Containment, Eradication, and Recovery**
+- The proper steps to be taken would be to isolate the device, remove all malicious files/programs, and restore the system back to a secure state using a back-up.
+- Before removing all the malicious files, its important to retain all relevant data for future purpose and legal reasons. Microsoft Defender has a built-in feature that automatically collects the evidence of the attack.
+**Post-Incident Activity**
+- This would include the lessons learned and the retention of the data collected.
+- The lessons learned would be to prevent any user from altering the security confirguations of their system and to implement a secure baseline for all endpoints.
+- The data collected from the attack should be saved according to the organization's policies.
